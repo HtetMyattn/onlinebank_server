@@ -1,0 +1,61 @@
+body {
+    background-color: lightskyblue;
+}
+
+#user {
+    bottom: 440px;
+}
+
+#pass {
+    bottom: 380px;
+}
+
+input[type=text], select {
+    position: absolute;
+    font-size: 18px;
+    left: 750px;
+    bottom: 475px;
+    width: 350px;
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    position: absolute;
+    font-size: 19px;
+    left: 750px;
+    bottom: 310px;
+    width: 350px;
+    background-color: lightskyblue;
+    color: white;
+    padding: 10px 15px ;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(50, 169, 243);
+}
+
+.round {
+    background-color: white;
+    width: 505px;
+    height: 490px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: -5;
+    left: 670px;
+    top: 230px;
+}
+
+.icon {
+    position: absolute;
+    left: 715px;
+    top: 260px;
+}

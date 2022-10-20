@@ -1,0 +1,81 @@
+body {
+    background-color: lightskyblue;
+}
+
+#button1 {
+    position: absolute;
+    left: 0px;
+    bottom: 550px;
+}
+
+#button2 {
+    position: absolute;
+    left: 0px;
+    bottom: 485px;
+}
+
+#button3 {
+    position: absolute;
+    left: 0px;
+    bottom: 420px;
+}
+
+#button4 {
+    position: absolute;
+    left: 0px;
+    bottom: 355px;
+}
+
+#button5 {
+    position: absolute;
+    left: 0px;
+    bottom: 290px;
+}
+
+#button6 {
+    position: absolute;
+    left: 0px;
+    bottom: 225px;
+}
+
+#button7 {
+    position: absolute;
+    left: 0px;
+    bottom: 160px;
+}
+
+input[type=submit] {
+    position: absolute;
+    font-size: 19px;
+    text-align: center;
+    left: 750px;
+    width: 350px;
+    background-color: lightskyblue;
+    color: white;
+    padding: 10px 15px ;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(50, 169, 243);
+}
+
+.round {
+    background-color: white;
+    width: 450px;
+    height: 700px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: -5;
+    left: 705px;
+    top: 175px;
+}
+
+.icon {
+    position: absolute;
+    left: 760px;
+    top: 200px;
+}
