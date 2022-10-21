@@ -1,14 +1,17 @@
 body {
-    background-color: lightskyblue;
+    background-color: maroon;
 }
 
-#user {
-    bottom: 440px;
+#transfer {
+    bottom: 485px;
 }
 
-#pass {
-    bottom: 380px;
+#toAccount {
+    bottom: 415px;
 }
+
+
+
 
 input[type=text], select {
     position: absolute;
@@ -28,9 +31,9 @@ input[type=submit] {
     position: absolute;
     font-size: 19px;
     left: 750px;
-    bottom: 365px;
+    bottom: 355px;
     width: 350px;
-    background-color: lightskyblue;
+    background-color: maroon;
     color: white;
     padding: 10px 15px ;
     margin: 8px 0;
@@ -40,7 +43,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: rgb(50, 169, 243);
+    background-color: rgb(161, 1, 1);
 }
 
 .round {
@@ -57,5 +60,5 @@ input[type=submit]:hover {
 .icon {
     position: absolute;
     left: 715px;
-    top: 260px;
+    top: 235px;
 }

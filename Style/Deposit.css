@@ -1,0 +1,39 @@
+body {
+    background-color: maroon;
+}
+
+input[type=submit] {
+    position: absolute;
+    font-size: 19px;
+    left: 750px;
+    bottom: 430px;
+    width: 350px;
+    background-color: maroon;
+    color: white;
+    padding: 10px 15px ;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color:rgb(161, 1, 1);
+}
+
+.round {
+    background-color: white;
+    width: 505px;
+    height: 440px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: -5;
+    left: 670px;
+    top: 230px;
+}
+
+.icon {
+    position: absolute;
+    left: 715px;
+    top: 260px;
+}

@@ -1,17 +1,22 @@
 body {
-    background-color: lightskyblue;
+    background-color: maroon;
 }
 
-#element1 {display:inline-block;margin-left:-10px;} 
-#element1 {display:inline-block;margin-top:-10px;}
+#user {
+    bottom: 440px;
+}
+
+#pass {
+    bottom: 380px;
+}
 
 input[type=text], select {
-    position: relative;
-    font-size: 18px;
-    left: 1350px;
-    bottom: 575px;
+    position: absolute;
+    font-size: 22px;
+    left: 750px;
+    bottom: 475px;
     width: 350px;
-    padding: 8px 15px;
+    padding: 12px 15px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -20,12 +25,12 @@ input[type=text], select {
 }
 
 input[type=submit] {
-    position: relative;
+    position: absolute;
     font-size: 19px;
-    left: 1350px;
-    bottom: 575px;
+    left: 750px;
+    bottom: 365px;
     width: 350px;
-    background-color: lightskyblue;
+    background-color: maroon;
     color: white;
     padding: 10px 15px ;
     margin: 8px 0;
@@ -35,22 +40,22 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: rgb(50, 169, 243);
+    background-color:rgb(161, 1, 1);
 }
 
 .round {
     background-color: white;
-    width: 450px;
-    height: 575px;
+    width: 505px;
+    height: 440px;
     border-radius: 10px;
     position: absolute;
     z-index: -5;
-    left: 1307px;
-    bottom: 195px;
+    left: 670px;
+    top: 230px;
 }
 
 .icon {
     position: absolute;
-    right: 150px;
-    bottom: 540px; 
+    left: 715px;
+    top: 260px;
 }

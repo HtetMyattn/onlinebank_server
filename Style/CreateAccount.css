@@ -1,5 +1,5 @@
 body {
-    background-color: lightskyblue;
+    background-color: maroon;
 }
 
 #user {
@@ -12,11 +12,11 @@ body {
 
 input[type=text], select {
     position: absolute;
-    font-size: 22px;
+    font-size: 18px;
     left: 750px;
     bottom: 475px;
     width: 350px;
-    padding: 12px 15px;
+    padding: 8px 15px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -28,9 +28,9 @@ input[type=submit] {
     position: absolute;
     font-size: 19px;
     left: 750px;
-    bottom: 365px;
+    bottom: 310px;
     width: 350px;
-    background-color: lightskyblue;
+    background-color: maroon;
     color: white;
     padding: 10px 15px ;
     margin: 8px 0;
@@ -40,13 +40,13 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: rgb(50, 169, 243);
+    background-color: rgb(161, 1, 1);
 }
 
 .round {
     background-color: white;
     width: 505px;
-    height: 440px;
+    height: 490px;
     border-radius: 10px;
     position: absolute;
     z-index: -5;

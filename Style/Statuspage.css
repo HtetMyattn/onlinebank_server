@@ -1,5 +1,5 @@
 body {
-    background-color: lightskyblue;
+    background-color: maroon;
 }
 
 #button1 {
@@ -50,7 +50,7 @@ input[type=submit] {
     text-align: center;
     left: 750px;
     width: 350px;
-    background-color: lightskyblue;
+    background-color: maroon;
     color: white;
     padding: 10px 15px ;
     margin: 8px 0;
@@ -60,7 +60,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: rgb(50, 169, 243);
+    background-color: rgb(161, 1, 1);
 }
 
 .round {
