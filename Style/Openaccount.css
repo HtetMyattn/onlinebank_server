@@ -1,0 +1,45 @@
+body {
+    background-color: maroon;
+}
+
+#savings {
+    position: absolute;
+    left: 0px;
+    bottom:75px;
+}
+
+input[type=submit] {
+    position: absolute;
+    font-size: 22px;
+    left: 750px;
+    bottom: 345px;
+    width: 350px;
+    background-color: maroon;
+    color: white;
+    padding: 10px 15px ;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(161, 1, 1);
+}
+
+.round {
+    background-color: white;
+    width: 505px;
+    height: 470px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: -5;
+    left: 670px;
+    top: 240px;
+}
+
+.icon {
+    position: absolute;
+    left: 715px;
+    top: 260px;
+}
