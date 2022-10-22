@@ -25,43 +25,43 @@
 #button1 {
     position: absolute;
     left: 0px;
-    bottom: 550px;
+    top: 405px;
 }
 
 #button2 {
     position: absolute;
     left: 0px;
-    bottom: 485px;
+    top: 470px;
 }
 
 #button3 {
     position: absolute;
     left: 0px;
-    bottom: 420px;
+    top: 535px;
 }
 
 #button4 {
     position: absolute;
     left: 0px;
-    bottom: 355px;
+    top: 600px;
 }
 
 #button5 {
     position: absolute;
     left: 0px;
-    bottom: 290px;
+    top: 665px;
 }
 
 #button6 {
     position: absolute;
     left: 0px;
-    bottom: 225px;
+    top: 725px;
 }
 
 #button7 {
     position: absolute;
     left: 0px;
-    bottom: 160px;
+    top: 790px;
 }
 
 input[type=submit] {
