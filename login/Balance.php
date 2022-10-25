@@ -1,166 +1,155 @@
+<?php 
+session_start();
+
+	include("Connection.php");
+	include("Functions.php");
+    
+	$user_data = check_login($con);
+?>
+
 <html>
 
     <head>
         <title>Balance</title>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
 
-        <style>
+    <style>
 
-            #icon {
-            position: absolute;
-            left: 760px;
-            top: 215px;
-            }
+        #pin {
+        position: absolute;
+        left: 980px;
+        top: 632px;
+        font-family: Arial; 
+        color:rgb(20, 27, 100); 
+        font-size: 145%;
+        }
 
-            #headericon {
-            position: fixed;
-            top: 5px;
-            left: 15px;
-            }
+        #pinbox {
+        position: absolute;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        padding: 8px 15pxpx;
+        width: 350px;
+        height: 40px;
+        left: 749px;
+        top: 631px;
+        }
 
-            #header {
-            position: fixed;
-            top:0px;
-            left: 0px;
-            background-color: white;
-            width: 1850px;
-            height: 80px;
-            z-index: -1;
-            }
+        #pintext {
+        position: absolute;
+        left: 767px;
+        top: 637.5px;
+        font-family: Helvetica; 
+        color: #696969; 
+        font-size: 122%;
+        }
 
-            #checkbalance {
-            position: absolute;
-            top: 405px;
+        #checkroutenum {
+        position: absolute;
+        left: 871px;
+        top: 447.3px;
+        font-family: Arial; 
+        color:rgb(20, 27, 100); 
+        font-size: 145%;
+        }
 
-            }
+        #checkroutetext {
+        position: absolute;
+        left: 766.6px;
+        top: 451.7px;
+        font-family: Helvetica; 
+        color: #696969; 
+        font-size: 122%;
+        }
 
-            #checkroute {
-            position: absolute;
-            top: 455px;
-            }
+        
 
-            #savebalance {
-            position: absolute;
-            top: 525px;
-            }
+        #checkbalance {
+        border: 1px solid #FFFFFF;
+        top: 405px;
+        }
 
-            #saveroute {
-            position: absolute;
-            top: 575px;
-            }
+        #checkroute {
+        border: 1px solid #FFFFFF;
+        top: 455px;
+        }
 
-            #pin {
-            position: absolute;
-            top: 640px;
-            left: 750px;
-            font-size: 20px;
-            width: 350px;
-            padding: 8px 15px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            }
+        #savebalance {
+        border: 1px solid #FFFFFF;
+        top: 525px;
+        }
 
-            #done {
-            position: absolute;
-            top: 710px;
-            }
+        #saveroute {
+        border: 1px solid #FFFFFF;
+        top: 575px;
+        }
 
-            #rectangle {
-            position: absolute;
-            top: 185px;
-            left: 700px;
-            width: 450px;
-            height: 600px;
-            border-radius: 10px;
-            background-color: white;
-            z-index: -1;
-            }
+        #backbalance {
+        top: 710px;
+        }
 
-            #checkingbox {
-            position: absolute;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            padding: 8px 15pxpx;
-            width: 350px;
-            height: 101px;
-            left: 749px;
-            top: 391px;
-            }
+        #rectanglebalance {
+        position: absolute;
+        top: 185px;
+        left: 700px;
+        width: 450px;
+        height: 600px;
+        border-radius: 10px;
+        background-color: white;
+        z-index: -3;
+        }
 
-            #savingsbox {
-            position: absolute;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            padding: 8px 15pxpx;
-            width: 350px;
-            height: 101px;
-            left: 749px;
-            top: 511px;
-            }
+        #checkingbox {
+        position: absolute;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        padding: 8px 15pxpx;
+        width: 350px;
+        height: 101px;
+        left: 749px;
+        top: 391px;
+        }
 
-            #background {
-            position: absolute;
-            top: -10px;
-            left: -10px; 
-            z-index: -2;
-            }
+        #savingsbox {
+        position: absolute;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        padding: 8px 15pxpx;
+        width: 350px;
+        height: 101px;
+        left: 749px;
+        top: 511px;
+        }
 
-            input[type=text], select {
-            left: 750px;
-            font-size: 20px;
-            width: 350px;
-            padding: 8px 15px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #FFFFFF;
-            border-radius: 4px;
-            box-sizing: border-box;
-            }
-
-            input[type=submit] {
-            position: absolute;
-            top: 800px;
-            left: 750px;
-            font-size: 20px;
-            width: 350px;
-            color: white;
-            padding: 10px 15px ;
-            margin: 8px 0;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            background-color: rgb(20, 27, 100);
-            }
-
-            input[type=submit]:hover {
-            background-color: darkblue;
-            }
-
-        </style>
+    </style>
 
         <img id="background" src="Images/Background.png" alt="Background" class="background" width="1850" height="1040.625">
-        <img id="icon" src="Images/Icon.png" alt="Icon" class="icon" width="326" height="179">
-        <div id="rectangle" class="round"></div>
-        <a href="Homepage.php"><img id="headericon" src="Images/Icon.png" alt="Icon" class="icon" width="127.486" height="70"></a>
+        <img id="logomid" src="Images/Logo.png" alt="Icon" class="icon" width="326" height="179">
+        <div id="rectanglebalance" class="round"></div>
+        <a href="Homepage.php"><img id="headericon" src="Images/Logo.png" alt="Icon" class="icon" width="127.486" height="70"></a>
 		<div id="header" class=""></div>
         <p id="checkingbox"></p>
         <p id="savingsbox"></p>
+        <p id="pinbox"></p>
 
         <div>
             <form id="register" action="Statuspage.php">
                 <input type="text" id="checkbalance"  name="username" placeholder="Checking: $">
-                <input type="text" id="checkroute"  name="username" placeholder="Routing: # ">
                 <input type="text" id="savebalance"  name="username" placeholder="Savings: $">
                 <input type="text" id="saveroute"  name="username" placeholder="Routing: # ">
-                <input type="text" id="pin"  name="username" placeholder="Your 4-Digit Pin is: #****">
-                <input type="submit" id="done" value="Done">
+                <input type="submit" id="backbalance" value="Back">
             </form>
         </div>
+
+        
+        <p id="checkroutetext">Routing: #</p>
+        <p id="checkroutenum"><?php echo $user_data['checkingroute']; ?></p>
+
+        <p id="pintext">Your 4-Digit Pin: #</p>
+        <p id="pin"><?php echo $user_data['pin']; ?></p>
 
     </body>
 

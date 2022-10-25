@@ -24,14 +24,11 @@ session_start();
 				}
 			}
 			
-			echo "<p style='font-family: ".'Arial'."; color:red; position: absolute; top: 690px; left: 1300px;'>" . "<b>" . 
-			"Incorrect username or password." . "</b>" . "</p>";
+			echo "<p id='error'>" . "<b>" . "Incorrect username or password." . "</b>" . "</p>";
 		} else {
-			echo "<p style='font-family: ".'Arial'."; color:red; position: absolute; top: 690px; left: 1300px;'>" . "<b>" . 
-			"Please fill in the text fields." . "</b>" . "</p>";
+			echo "<p id='error'>" . "<b>" . "Please fill in the text fields." . "</b>" . "</p>";
 		}
 	}
-
 ?>
 
 <!DOCTYPE html>
@@ -39,119 +36,39 @@ session_start();
 
 	<head>
 		<title>Homepage</title>
+		<link rel="stylesheet" href="style.css">
 	</head>
 
 	<body>
 
-		<style type="text/css">
-
-			#icon {
-			position: absolute;
-			top: 220px;
-			left: 1265px;
-			}
-
-			#user {
-			top: 450px;
-			left: 1300px;
-			}
-
-			#pass {
-			top: 515px;
-			left: 1300px;
-			}
-
-			#button {
-			top: 580px;
-			left: 1300px;
-			}
-
-			#createaccount {
-			top: 645px;
-			left: 1300px;
-			}
-
-			#rectangle {
-			position: absolute;
-			top: 200px;
-			left: 1250px;
-			background-color: white;
-			width: 450px;
-			height: 545px;
-			border-radius: 10px;
-			z-index: -1;
-			}
-
-			#headericon {
-			position: fixed;
-			top: 5px;
-			left: 15px;
-			}
-
-			#header {
-			position: fixed;
-			top:0px;
-			left: 0px;
-			background-color: white;
-			width: 1850px;
-			height: 80px;
-			z-index: -1;
-			}
-
-			#background {
-			position: absolute;
-			top: -10px;
-			left: -10px; 
-			z-index: -2;
-			}
-
-			input[type=text], select {
-			position: absolute;
-			font-size: 20px;
-			width: 350px;
-			padding: 8px 15px;
-			margin: 8px 0;
-			display: inline-block;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			box-sizing: border-box;
-			}
-
-			input[type=submit] {
-			position: absolute;
-			font-size: 20px;
-			width: 350px;
-			color: white;
-			padding: 10px 15px ;
-			margin: 8px 0;
-			border: none;
-			border-radius: 4px;
-			cursor: pointer;
-			background-color: rgb(20, 27, 100);
-			}
-
-			input[type=submit]:hover {
-			background-color: darkblue;
-			}
-
-		</style>
-
 		<img id="background" src="Images/Background.png" alt="Background" class="background" width="1850" height="1040.625">
-		<img id="icon" src="Images/Icon.png" alt="Icon" class="icon" width="423.8" height="232.7">
-		<div id="rectangle" class="round"></div>
-		<a href="Homepage.php"><img id="headericon" src="Images/Icon.png" alt="Icon" class="icon" width="127.486" height="70"></a>
+		<img id="logohome" src="Images/Logo.png" alt="Icon" class="icon" width="392.242" height="220">
+		<div id="rectanglehome" class="round"></div>
+		<a href="Homepage.php"><img id="headericon" src="Images/Logo.png" alt="Icon" class="icon" width="127.486" height="70"></a>
 		<div id="header" class=""></div>
 
+		<input id="checkbox" type="checkbox" onclick="myFunction()"> <p id="showpass">Show Password</p>
+		<script>
+		function myFunction() {
+			var x = document.getElementById("pass");
+			if (x.type === "password") {
+				x.type = "text";
+			} else {
+				x.type = "password";
+			}
+		}
+		</script>
+		
 		<div>
 			<form method="post">
 				<input id="user" type="text" name="user_name" placeholder="Username">
-				<input id="pass" type="text" name="password" placeholder="Password">
-				<input id="button" type="submit" value="Login">
+				<input id="pass" type="password" name="password" placeholder="Password">
+				<input id="login" type="submit" value="Login">
 			</form>
 		</div>
 
 		<div>
-			<form action="Signup.php">
+			<form action="Register.php">
 				<input id="createaccount" type="submit" value="Create Account">
 			</form>
 		</div>
