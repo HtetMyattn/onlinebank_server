@@ -44,6 +44,18 @@ input[type=text], select {
     box-sizing: border-box;
 }
 
+input[type=number], select {
+    left: 750px;
+    font-size: 20px;
+    width: 350px;
+    padding: 8px 15px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
 input[type=submit] {
     position: absolute;
     top: 515px;
